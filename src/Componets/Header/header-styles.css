@@ -1,0 +1,223 @@
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fondo-cabecera);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    height: 95px;
+    width: 100%;
+  }
+  
+  .logo a {
+    display: inline-block;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .nav-links{
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links.with-searchbar {
+    margin-left: 240px;
+  }
+  
+  .nav-links a {
+    position: relative;
+    color: var(--letras-menu);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bolder;
+    font-size: large;
+  }
+  
+  .nav-links a:hover {
+    color: var(--naranja); 
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, var(--naranja), var(--letras-menu));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s, color 0.3s;
+  }
+  
+  .nav-links a:hover::after {
+    background-size: 100% 100%;
+  }
+  
+  /* Efecto marcado cuando se selecciona una opcion del menú */
+  .nav-links .active{
+    color: var(--naranja);
+  }
+  
+  .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20px;
+  }
+  
+  .options-user-icon-name div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  #options-user-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--naranja);
+    
+  }
+  
+  #option-user-icon-down{
+    color: var(--naranja);
+    
+  }
+  
+  #user-name{
+    color: var(--naranja);
+    
+  }
+  
+  /* Barra de busqueda (Componente) */
+  .searchBar-input-wrapper{
+    width: 200px;
+    height: 30px;
+    background: var(--fondo-cabecera);
+    border-radius: 15px;
+    padding: 5px 15px;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+                inset  2px  2px 6px rgba(0, 0, 0, 0.8);  
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchBar-input{
+    background-color: transparent;
+    color: var(--naranja);
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-left: 5px;
+  }
+  
+  #searchBar-input:focus{
+    outline: none;
+  }
+  
+  #searchBar-icon{
+    color: var(--letras-menu);
+  }
+  
+  /* Toggle dark switch */
+  .toggle-container{
+    width: 100%;
+  }
+  
+  .toggle-container button {
+    height: 40px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--fondo);
+    border: none;
+    outline: none;
+    color: var(--naranja);
+    cursor: pointer;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px; 
+  }
+  
+  .toggle-container button:hover {
+    background-color: var(--fondo-cabecera);
+  }
+  
+  #darkmode-icon, #lightmode-icon{
+    width: 23px;
+    height: 23px;
+  }
+  
+  /* Options menu */
+  .options-menu {
+    position: absolute;
+    top: 15.5%;
+    left: 93.2%;
+    width: 10%;
+    height: 18%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(20, 21, 24, 0.99);
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+                 5px  5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  .option-user-icon-down.up{
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+  
+  .option-user-icon-down{
+    transition: transform 0.3s;
+  }
+  
+  .options-menu hr{
+    width: 90%;
+    align-self: center;
+    border-color: var(--letras-menu);
+  }
+
+  /* Terminos y condiciones */
+  #terms-button, #contact-button{
+    height: 40px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--fondo);
+    border: none;
+    outline: none;
+    color: var(--naranja);
+    cursor: pointer;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px; 
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#terms-button:hover, #contact-button:hover {
+    background-color: var(--fondo-cabecera);
+}
+  
+#terms-button-icon, #contact-button-icon{
+    width: 23px;
+    height: 23px;
+}

@@ -1,0 +1,237 @@
+:root{
+    --fondo-cabecera: #1a1b1f; 
+    --letras-menu: #434446; 
+    --blanco-apagado: #c0c1c2;
+    --fondo: #141518;
+    --naranja: #fC5C19;
+    --color-tarjetas: #0f0f11;
+}
+
+/* Login Section Style */
+* {
+    box-sizing: border-box;
+}
+
+.login-body {
+    font-family: 'Montserrat', sans-serif; /* Cambiar por otra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -20px 0 50px;
+    margin-top: 20px;
+    background: var(--fondo);
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.login-paragraph {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: .5px;
+    margin: 20px 0 30px;
+}
+
+.container {
+    background: var(--color-tarjetas);
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+                 5px  5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    opacity: 85%;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    transition: 333ms;
+}
+
+.form-container form {
+    background: var(--color-tarjetas);
+    display: flex;
+    flex-direction: column;
+    padding:  0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form h1{
+    color: var(--naranja);
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    background: var(--fondo);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: var(--naranja);
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+                inset  2px  2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.form-container input::placeholder{
+    color: var(--letras-menu);
+}
+
+.form-container input:hover {
+    transform: scale(101%);
+}
+
+.form-container input:focus {
+    border: 0.5px solid var(--letras-menu);
+    outline: none;
+}
+
+.forgetPassword {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: var(--letras-menu);
+    font-size: 14px;
+}
+
+#login-click-here {
+    color: var(--blanco-apagado);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login-button {
+    border-radius: 50px;
+    border: 1px solid #008ecf;
+    background: var(--fondo);
+    color: var(--naranja);
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    box-shadow:  -2px -2px 6px rgba(255, 255, 255, 0.01),
+                  2px  2px 6px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.login-button:active {
+    transform: scale(.98);
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+                inset  2px  2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.login-button:focus {
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+}
+
+.overlay {
+    background: #ff416c;
+    background: linear-gradient(to right, var(--color-tarjetas), var(--fondo-cabecera)) no-repeat 0 0 / cover;
+    color: var(--naranja);
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+
+#login-span{
+    font-weight: bold;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateY(0);
+}
+
+.overlay-left {
+    transform: translateY(-20%);
+}
+
+/* Move signin to right */
+.container.right-panel-active .sign-in-container {
+    transform: translateY(100%);
+}
+
+/* Move overlay to left */
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+/* Bring signup over signin */
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Move overlay back to right */
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Bring back the text to center */
+.container.right-panel-active .overlay-left {
+    transform: translateY(0);
+}
+
+/* Same effect for right */
+.container.right-panel-active .overlay-right {
+    transform: translateY(20%);
+}

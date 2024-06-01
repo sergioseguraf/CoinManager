@@ -1,0 +1,54 @@
+:root{
+    --fondo-cabecera: #1a1b1f; 
+    --letras-menu: #434446; 
+    --blanco-apagado: #c0c1c2;
+    --fondo: #141518;
+    --naranja: #fC5C19;
+    --color-tarjetas: #0f0f11;
+}
+
+#login-button{
+    height: 30px;
+    background: var(--fondo);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: var(--naranja);
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.01),
+                2px  2px 6px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#login-button:active, #logout-button:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.01),
+                inset  2px  2px 6px rgba(0, 0, 0, 0.8);
+}
+
+#logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+}
+
+#logout-icon{
+    width: 23px;
+    height: 23px;
+}
+
+#logout-button{
+    height: 40px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--fondo);
+    border: none;
+    outline: none;
+    color: var(--naranja);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#logout-button:hover{
+    background-color: var(--fondo-cabecera);
+}

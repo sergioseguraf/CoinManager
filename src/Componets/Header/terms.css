@@ -1,0 +1,68 @@
+.terms-container {
+    color: var(--blanco-apagado);
+    padding: 20px;
+    width: 60%;
+    margin: 25px auto;
+    background-color: var(--color-tarjetas);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.terms-container h2 {
+    color: var(--naranja);
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.terms-container p {
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center;
+    color: var(--blanco-apagado);
+    padding: 20px;
+    width: 60%;
+    min-height: 82vh;
+    margin: 25px auto;
+    background-color: var(--color-tarjetas);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-container h2 {
+    color: var(--naranja);
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+}
+
+.link {
+    color: var(--naranja); /* Utiliza el color naranja que definiste */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efecto de transición suave al pasar el ratón */
+}
+  
+.link:hover {
+    color: #eb7937de; /* Cambia el color al pasar el ratón para dar retroalimentación visual */
+}
+  
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-out 1s forwards;
+}
+  
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,199 @@
+:root{
+    --fondo-cabecera: #1a1b1f; 
+    --letras-menu: #434446; 
+    --blanco-apagado: #c0c1c2;
+    --fondo: #141518;
+    --naranja: #fC5C19;
+    --color-tarjetas: #0f0f11;
+}  
+/* Efecto aparecer Landing Page */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.5s, transform 0.5s;
+}
+  
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Primera parte*/
+.title-section{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title-section-text-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.title-section-text-div h1{
+    color: var(--blanco-apagado);
+    font-size: 50px;
+}
+
+.title-section-text-div span{
+    color: var(--naranja);
+}
+
+.title-section-text-div p span{
+    font-weight: bolder;
+    color: var(--blanco-apagado);
+}
+
+.title-section-text-div p{
+    color: var(--blanco-apagado);
+}
+
+.title-section-img-div img {
+    width: 480px;
+    height: 300px;
+}
+
+/*Segunda parte*/
+.info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.info-section-text-div h2{
+    margin-bottom: 15px;
+    font-size: 50px;
+    color: var(--blanco-apagado);
+}
+
+.info-section-text-div h2 span{
+    color: var(--naranja);
+}
+
+.info-section-text-div p span{
+    font-weight: bolder;
+}
+
+.info-section-text-div p{
+    color: var(--blanco-apagado);
+}
+
+.info-section-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 20px;
+}
+
+.info-section-div-card{
+    padding: 20px;
+    text-align: center;
+    margin-right: 60px; /* Espacio entre las columnas */
+}
+
+.info-section-div-card:nth-child(3n) {
+    margin-right: 0; /* Eliminar margen derecho para la última tarjeta en cada fila */
+}
+
+.info-section-div-card svg{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.info-section-div-card h3{
+    margin-bottom: 10px;
+    color: var(--naranja);
+}
+
+.info-section-div-card p{
+    color: var(--blanco-apagado);
+}
+
+/* Tercera parte */
+.slider {
+    height: 20vw;
+    width: 75vw;
+    margin: auto;
+    margin-top: 120px;
+    overflow: hidden;
+}
+
+.crypto-title {
+    margin-bottom: 15px;
+    font-size: 50px;
+    color: var(--blanco-apagado);
+}
+
+.crypto-title span {
+    color: var(--naranja);
+}
+
+.slider p span {
+    font-weight: bolder;
+    color: var(--blanco-apagado);
+}
+
+.slider p {
+    color: var(--blanco-apagado);
+}
+
+.crypto-icon {
+    width: 100%;
+    height: 40px;
+    margin: 0 10px;
+    color: var(--naranja);
+    /* filter: drop-shadow(3px 3px 20px var(--blanco-apagado)); */
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 10s linear infinite;
+            animation: scroll 10s linear infinite;
+    display: flex;
+    width: calc(200px * 18);
+    margin-top: 80px;
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 9));
+              transform: translateX(calc(-200px * 9));
+    }
+}
+  
+@keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 9));
+              transform: translateX(calc(-200px * 9));
+    }
+}
+  
+/* Cuarta parte */
+.title-section-text-div h2{
+    color: var(--blanco-apagado);
+    font-size: 40px;
+}
+
+#bitcoin{
+    width: 500px;
+    height: 320px;
+    color: var(--naranja);
+}

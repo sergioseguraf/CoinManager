@@ -1,0 +1,59 @@
+:root{
+  --fondo-cabecera: #1a1b1f; 
+  --letras-menu: #434446; 
+  --blanco-apagado: #c0c1c2;
+  --fondo: #141518;
+  --naranja: #fC5C19;
+  --color-tarjetas: #0f0f11;
+  --modal-activos: #141518;
+  --letras-modal-activos: #c0c1c2;
+  --letras-modal-activos-selected: #434446;
+  --add-portfolio-cards: #141518;
+  --add-portfolio-cards-hover: #1a1b1f;
+  --add-portfolio-cards-selected: #1a1b1f;
+}
+
+[data-theme="dark"] {
+  --fondo: #f7f8f8 /* Fondo general */
+  --naranja: #fC5C19; /* Color naranja */
+  --fondo-cabecera: #f0f0f0; /* Fondo de la cabecera */
+  --letras-menu: #494f5b; /* Color de letras para el menú */
+  --blanco-apagado: #434446; /* Blanco apagado */
+  --color-tarjetas: #edeef1; /* Color de fondo para las tarjetas */
+  --modal-activos: #f7f8f8;
+  --letras-modal-activos: #494f5b;
+  --letras-modal-activos-selected: #dcdcdc;
+  --add-portfolio-cards: #edeef1;
+  --add-portfolio-cards-hover: #f7f8f8;
+  --add-portfolio-cards-selected: #f7f8f8;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background-color: var(--fondo);
+}
+
+/* Modo claro */
+.clear{
+  background-color: var(--blanco-apagado);
+  transition: all 2s ease;
+}
+
+
+/* Main */
+main {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  min-height: calc(100vh - 9.9375rem);
+}
+
+
